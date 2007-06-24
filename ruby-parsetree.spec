@@ -1,4 +1,5 @@
 Summary:	Access to Ruby's internal parse tree
+Summary(pl.UTF-8):	Dostęp do wewnętrznego drzewa analizy interpretera Ruby
 Name:		ruby-parsetree
 Version:	1.7.1
 Release:	1
@@ -16,8 +17,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 ParseTree is a C extension (using RubyInline) that extracts the parse
 tree for an entire class or a specific method and returns it as a
-s-expression (aka sexp) using ruby's arrays, strings, symbols, and
+s-expression (aka sexp) using Ruby's arrays, strings, symbols, and
 integers.
+
+%description -l pl.UTF-8
+ParseTree to rozszerzenie C (używające RubyInline) wydobywające drzewo
+analizy dla całej klasy lub określonej metody i zwracające je jako
+s-wyrażenie (sexp) przy użyciu tablic, łańcuchów, symboli i liczb
+całkowitych języka Ruby.
 
 %prep
 %setup -q -c
@@ -50,6 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc rdoc
-%attr(755,root,root) /usr/bin/*
+%attr(755,root,root) %{_bindir}/*
 %{ruby_rubylibdir}/*.rb
 %{ruby_ridir}/*
