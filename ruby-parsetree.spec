@@ -1,12 +1,13 @@
+# Todo: degemify
 Summary:	Access to Ruby's internal parse tree
 Summary(pl.UTF-8):	Dostęp do wewnętrznego drzewa analizy interpretera Ruby
 Name:		ruby-parsetree
-Version:	1.7.1
+Version:	2.0.2
 Release:	1
 License:	Ruby's
 Group:		Development/Languages
-Source0:	http://rubyforge.org/frs/download.php/21469/ParseTree-%{version}.gem
-# Source0-md5:	b516a478ac1fe6ae35d0c23eaca24c3e
+Source0:	http://gems.rubyforge.org/gems/ParseTree-%{version}.gem
+# Source0-md5:	137bb2b6275d29f37964d0acd32ccfaa
 URL:		http://parsetree.rubyforge.org
 BuildRequires:	rake
 BuildRequires:	rpmbuild(macros) >= 1.277
@@ -41,6 +42,8 @@ ruby setup.rb setup
 rdoc --op rdoc lib
 rdoc --ri --op ri lib
 rm ri/created.rid
+rm ri/Module/cdesc-Module.yaml
+rm ri/Class/cdesc-Class.yaml
 
 %install
 rm -rf $RPM_BUILD_ROOT
