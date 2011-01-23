@@ -9,7 +9,6 @@ Group:		Development/Languages
 Source0:	http://gems.rubyforge.org/gems/ParseTree-%{version}.gem
 # Source0-md5:	137bb2b6275d29f37964d0acd32ccfaa
 URL:		http://parsetree.rubyforge.org
-BuildRequires:	rake
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	setup.rb >= 3.3.1
 Requires:	ruby-inline
@@ -42,8 +41,6 @@ ruby setup.rb setup
 rdoc --op rdoc lib
 rdoc --ri --op ri lib
 rm ri/created.rid
-rm ri/Module/cdesc-Module.yaml
-rm ri/Class/cdesc-Class.yaml
 
 %install
 rm -rf $RPM_BUILD_ROOT
