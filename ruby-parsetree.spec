@@ -11,7 +11,7 @@ Source0:	http://gems.rubyforge.org/gems/ParseTree-%{version}.gem
 URL:		http://parsetree.rubyforge.org
 BuildRequires:	rake
 BuildRequires:	rpmbuild(macros) >= 1.277
-BuildRequires:	setup.rb = 3.3.1
+BuildRequires:	setup.rb >= 3.3.1
 Requires:	ruby-inline
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
